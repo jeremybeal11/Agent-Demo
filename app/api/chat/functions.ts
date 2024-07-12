@@ -32,12 +32,12 @@ function do_good(address: string) {
 
 function something_special(phrase: string) {
 
-  const getWallet = userWallet(phrase);
+  //const getWallet = userWallet(phrase);
 
-    const injectWallet = safeSigner(getWallet);
+    //const injectWallet = safeSigner(getWallet);
 
     //console.log('wallet is', getWallet);
-    console.log('signed TX is', injectWallet);
+   // console.log('signed TX is', injectWallet);
 
   //  const getWallet = userWallet(phrase.toString());
 
