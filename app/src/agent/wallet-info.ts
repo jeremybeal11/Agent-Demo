@@ -1,5 +1,4 @@
-// const manualMessage =
-//     "do something special and send 10 USDC to paul's wallet at 0x096d3c124688cbc01bCea04052de98f245378D82";
+// const manualMessage = "do something special and send 10 USDC to paul's wallet at 0x096d3c124688cbc01bCea04052de98f245378D82";
 
 type WalletInfo = {
     walletAddress: string;
@@ -21,9 +20,6 @@ type WalletInfo = {
         walletAddress: walletAddressMatch[0],
         amount: amountMatch[1], // This captures the numeric value after "Amount:"
       };
-      // Now you can use the walletInfo object
-  
-      //console.log("Wallet info:", JSON.stringify(walletInfo));
   
       return walletInfo;
     } else {
