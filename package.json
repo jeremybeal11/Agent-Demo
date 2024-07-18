@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "backend": "tsc -t es2022 -m commonjs --allowSyntheticDefaultImports true --moduleResolution node ./src/agent/ai-signer.ts",
+    "backend": "tsc -t es2022 -m esnext --allowSyntheticDefaultImports true --moduleResolution node ./app/src/agent/ai-signer.ts",
     "start": "next start",
     "lint": "next lint",
     "format:write": "prettier --write \"**/*.{css,js,json,jsx,ts,tsx}\"",

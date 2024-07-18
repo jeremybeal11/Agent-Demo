@@ -1,8 +1,4 @@
-"use strict";
-// const manualMessage =
-//     "send 10 USDC to paul's wallet at 0x096d3c124688cbc01bCea04052de98f245378D82";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.userWallet = void 0;
+// const manualMessage = "send 10 USDC to paul's wallet at 0x096d3c124688cbc01bCea04052de98f245378D82";
 function userWallet(response) {
     // Regular expression to match a typical wallet address and an amount
     const walletAddressRegex = /0x[a-fA-F0-9]{40}/i;
@@ -16,8 +12,6 @@ function userWallet(response) {
             walletAddress: walletAddressMatch[0],
             amount: amountMatch[1], // This captures the numeric value after "Amount:"
         };
-        // Now you can use the walletInfo object
-        //console.log("Wallet info:", JSON.stringify(walletInfo));
         return walletInfo;
     }
     else {
@@ -25,4 +19,4 @@ function userWallet(response) {
         return null;
     }
 }
-exports.userWallet = userWallet;
+export { userWallet };

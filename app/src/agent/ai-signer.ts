@@ -7,6 +7,7 @@ const Web3 = require('web3');
 //import Web3Adapter from '@safe-global/protocol-kit';
 //import dotenv from 'dotenv';
 import { WalletInfo } from './wallet-info';
+//import {do_good} from '../../api/chat/functions';
 
 const AI_ADDR= "0x3FfE02322f6D3b23b4f153289E1f280eb15c0089"
 
@@ -23,6 +24,7 @@ const apiKit = new SafeApiKit({
   })
 
 //const manualMessage = "send 10 USDC to paul's wallet at 0x096d3c124688cbc01bCea04052de98f245378D82";
+
 
 async function safeSigner(walletInfo: WalletInfo) {
 
