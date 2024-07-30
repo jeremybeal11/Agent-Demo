@@ -2,11 +2,16 @@ import { CompletionCreateParams } from "openai/resources/chat/index";
 import { safeSigner } from "../../src/agent/ai-signer";
 import {userWallet} from "../../src/agent/wallet-info";
 
+type Phrase = {
+  address: string,
+  amount: string
+}
+
 export const functions: CompletionCreateParams.Function[] = [
   {
     name: "something_special",
     description:
-      "Do something special.",
+      "something_special",
     parameters: {
       type: "object",
       properties: {
@@ -20,12 +25,7 @@ export const functions: CompletionCreateParams.Function[] = [
   },
 ];
 
-function do_good(wallet: Phrase) {
-
-    console.log("inside the do_good function", wallet);
-    // Regular expression to match a typical wallet address and an amount
-    //const walletAddressRegex = /0x[a-fA-F0-9]{40}/i;
-    //const amountRegex = /(\d+\.?\d*)\s*USDC/;
+function get_wallet(wallet: Phrase) {
   
      // Extract wallet address and amount from the response
      const walletAddressMatch = wallet.address;
@@ -50,40 +50,28 @@ function do_good(wallet: Phrase) {
        return null;
      }
 
-    //console.log("this is the address", someAddress, "and the DOGOOD function is running");
-
-  //return someAddress;
-
 }
 
 function something_special(phrase: Phrase) {
+   
+  const getWallet = get_wallet(phrase);
 
-  console.log("something special with phrase:", phrase);
-  
-  
-    const getWallet = do_good(phrase);
-
+  console.log('this is the wallet', getWallet);
 
 
   if (getWallet) {
     const injectWallet = safeSigner(getWallet);
-    console.log('signed TX is', injectWallet);
+    console.log('this is the TX signed', injectWallet);
     return injectWallet;
   } else {
     console.error('Failed to get wallet');
   }
-
 
     //return injectWallet;
 
   //console.log('signed TX is', injectWallet);
 
 
-}
-
-type Phrase = {
-  address: string,
-  amount: string
 }
 
 export async function runFunction(name: string, phrase: Phrase) {
