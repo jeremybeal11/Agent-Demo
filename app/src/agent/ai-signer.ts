@@ -1,13 +1,8 @@
-//import { ethers } from 'ethers';
-//import { EthersAdapter } from '@safe-global/protocol-kit';
 import { MetaTransactionData, OperationType } from '@safe-global/safe-core-sdk-types';
 import SafeFactory from '@safe-global/protocol-kit';
 import SafeApiKit from '@safe-global/api-kit'
 const Web3 = require('web3');
-//import Web3Adapter from '@safe-global/protocol-kit';
-//import dotenv from 'dotenv';
 import { WalletInfo } from './wallet-info';
-//import {do_good} from '../../api/chat/functions';
 
 const AI_ADDR= "0x3FfE02322f6D3b23b4f153289E1f280eb15c0089"
 
@@ -23,7 +18,7 @@ const apiKit = new SafeApiKit({
     chainId: 84532n
   })
 
-//const manualMessage = "send 10 USDC to paul's wallet at 0x096d3c124688cbc01bCea04052de98f245378D82";
+//const manualMessage = "send 10 USDC to paul's wallet at 0xF51313c1ded7d65AF43B2b4D15Fa5530F33ba10f";
 
 
 async function safeSigner(walletInfo: WalletInfo) {

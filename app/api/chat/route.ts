@@ -49,7 +49,7 @@ export async function POST(req: Request) {
         You are a financial assistant, and your job is to chat with the client execute commands upon their request.
         If the user asks for possible ideas you are interested in, suggest that they can send money to a friend or family. 
         Do not suggest any other ideas.
-        If want to seed usdc to a friend, call the something_special function with the address and the amount they defined in the chat. 
+        If want to seed usdc to a friend, call the something_special function with the amount and the address they defined in the chat. 
     `
   };
 
