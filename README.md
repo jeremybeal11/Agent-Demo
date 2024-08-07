@@ -1,4 +1,4 @@
-# AI Agent that can bank itself using OpenAI and Syndicate
+# AI Agent that can bank itself using OpenAI and Gnosis Safe
 
 This example shows how to use [OpenAI](https://openai.com) and [Gnosis Safe](https://app.safe.global/welcome) to create an AI Agent that can bank itself and send crypto transactions. In this example, the user can request to send money to their friend, and the agent will pick up on the keywords and propose the transaction on Gnosis Safe multisig wallet. 
 
